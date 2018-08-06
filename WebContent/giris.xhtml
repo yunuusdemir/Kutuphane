@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<body> 
+
+<p:growl id="grow1" sticky="true" showDetail="true"/>
+
+<h:form>
+	
+		<p:panelGrid columns="2" style="position:absolute; top:250px; left:500px;">
+		<f:facet name="header">Giriş Yap</f:facet>
+		<h:outputText value="Kullanıcı Adı" />
+		<p:inputText value="#{girisBean.g.kadi}" requiredMessage="Kullanıcı Adı Alanını Boş Bırakmayınız..." />
+			<h:outputText value="Kullanıcı Şifre" />
+		<p:password value="#{girisBean.g.sifre}" requiredMessage="Parola Alanını Boş Bırakmayınız..."  />
+		
+		
+		
+		<f:facet name="footer">
+	<p:commandButton value="Giris Yap" action="#{girisBean.giriskontrol()}" ></p:commandButton>
+		 
+		
+		</f:facet>
+		</p:panelGrid>
+	</h:form>
+
+</body> 
+</html>

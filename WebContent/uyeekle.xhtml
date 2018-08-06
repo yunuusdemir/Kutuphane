@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"> 
+
+<h:head>
+				<title>Uye Ekle</title>
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<h:outputStylesheet library="css" name="bootstrap.css" />
+		<h:outputStylesheet library="css" name="bootstrap.min.css" />
+
+
+</h:head> 
+			<body style="background-image: url(resources/images/rsm1.jpg)"> 
+
+<f:view>
+	<h:form>
+				<h:panelGrid columns="3">
+                                            Adı:<h:inputText id="ad"
+											class="form-control "
+											requiredMessage="Adı boş bırakmayınız."
+											value="#{bean.kisi.ad}" required="true">
+										</h:inputText>
+											<h:messages for="ad" errorClass="errorMessage"></h:messages>
+                                            Soyadı:<h:inputText 
+											id="soyad" class="form-control "
+											requiredMessage="Soyadı boş bırakmayınız."
+											value="#{bean.kisi.soyad}" required="true">
+										</h:inputText>
+										<h:messages for="soyad" errorClass="errorMessage"></h:messages>
+                                            Eposta:<h:inputText
+											id="mail" class="form-control"
+											requiredMessage="Mail adresini boş bırakmayınız."
+											value="#{bean.kisi.eposta}" required="true">
+										</h:inputText>
+										<h:messages for="mail" errorClass="errorMessage"></h:messages>
+											Telefon:<h:inputText  
+											 id="tel" class="form-control phone_us"
+											maxlength="11" requiredMessage="Telefonu boş bırakmayınız."
+											value="#{bean.kisi.i.telno}" required="true">
+										</h:inputText>
+										<h:messages for="tel" errorClass="errorMessage"></h:messages>
+                                            Adres:<h:inputTextarea
+											id="adres" class="form-control"
+											requiredMessage="Adresi boş bırakmayınız."
+											value="#{bean.kisi.adres}" required="true">
+										</h:inputTextarea>
+										<h:messages for="adres" errorClass="errorMessage"></h:messages>
+
+											<h:commandButton  action="#{bean.ekle()}" value="Ekle" />
+										
+
+									</h:panelGrid>
+</h:form>
+</f:view>
+	<script src="resources/js/jquery-1.9.1.js"></script>
+	<script src="resources/js/jquery-ui.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="resources/input-mask/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="resources/input-mask/mask.js"></script>
+
+</body> 
+</html>
